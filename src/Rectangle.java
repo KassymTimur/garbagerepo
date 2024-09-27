@@ -1,11 +1,15 @@
-class Rectangle {
-    double height;
-    double width;
-    public Rectangle(double height) {
-        this.height = height;
-        this.width = width;
+class Rectangle implements Shape{
+    private double x,y;
+    private String name = "Rectangle";
+    @Override
+    public double getArea() {
+        return x*y;
     }
-    public double area(){
-        return this.height * this.width;
+    public double getPerimeter() {
+        return (x+y)*2;
     }
+    public String getName() {
+        return this.name;
+    }
+
 }
